@@ -5,6 +5,8 @@ import math
 
 ### EXPLORE-THEN-COMMIT (ETC) ALGORITHM ###
 
+# Given both the horizon and the gaps between arms.
+
 class ETC():
   def __init__(self, rew_avg, m):
 

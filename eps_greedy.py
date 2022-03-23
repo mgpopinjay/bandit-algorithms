@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 ### EPSLION GREEDY ALGORITHM ###
 
+# Given an arbitrary horizon with known gaps between arms
+
 class egreedy():
     def __init__(self, rew_avg):
 
@@ -11,8 +13,8 @@ class egreedy():
         self.num_arms = rew_avg.size  # number of arms (k)
         self.genie_arm = np.argmax(rew_avg)  # best arm given the true mean rewards
         self.chosen_arm = int  # arm chosen for exploitation
-        self.num_pulls = np.zeros(rew_avg.size)  # vector of empirical means of arms
-        self.emp_means = np.zeros(rew_avg.size)  # vector of number of times that arm k has been pulled
+        self.num_pulls = np.zeros(rew_avg.size)  # vector of number of times that arm k has been pulled
+        self.emp_means = np.zeros(rew_avg.size)  # vector of empirical means of arms
         self.cum_reg = [0]  # cumulative regret
         self.iter = 0  # current iteration index
         self.eps = 1  # probability of choosing an arm uniformly at random at time t

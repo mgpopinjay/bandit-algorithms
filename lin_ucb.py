@@ -5,12 +5,12 @@ from tqdm import tqdm
 
 # Context-action feature map
 available_arms = np.array([
-  (1, 1, 0, 0),
-  (1, 0, 1, 0),
-  (1, 0, 0, 1),
-  (0, 1, 1, 0),
-  (0, 1, 0, 1),
-  (0, 0, 1, 1)])
+(1, 1, 0, 0),
+(1, 0, 1, 0),
+(1, 0, 0, 1),
+(0, 1, 1, 0),
+(0, 1, 0, 1),
+(0, 0, 1, 1)])
 
 
 class context_arm(object):
@@ -34,10 +34,10 @@ class context_arm(object):
     return reward
 
 
+
 class LinUCB():
 
   def __init__(self, available_arms): # Initialization
-
     self.arms = available_arms
     self.num_arms = len(self.arms)               # number of arms in the decision set
     self.d = len(self.arms[0])                   # dimension of the space \mathbb{R}^d
@@ -48,7 +48,7 @@ class LinUCB():
     self.V = np.identity(self.d)                 # d*d matrix defined in eq 19.6  
     self.b = np.atleast_2d(np.zeros(self.d)).T   # summation defined in eq 19.5 
 
-  
+
 
   def choose_arm(self): # Compute UCB scores and return the selected arm and its index
 
@@ -69,6 +69,7 @@ class LinUCB():
     arm = self.arms[arm_idx]
 
     return arm, arm_idx
+
   
   def update(self, reward, arm_idx): # update the parameters
 
@@ -86,44 +87,49 @@ class LinUCB():
 
 ### Experiment Runner Function ###
 def regret_vs_horizon(REPEAT, HORIZON):
-  LinUCB_history = np.zeros(HORIZON)
-  my_context_arm = context_arm()
-  for rep in tqdm(range(REPEAT)):
+
+    LinUCB_history = np.zeros(HORIZON)
+    my_context_arm = context_arm()
+
+    for rep in tqdm(range(REPEAT)):
+
+        LinUCB_instance = LinUCB(available_arms)
+        
+        for i in range(HORIZON):
+            arm, arm_idx = LinUCB_instance.choose_arm()
+            reward = my_context_arm.pull_arm(arm_idx)
+            LinUCB_instance.update(reward, arm_idx)
+        LinUCB_history += np.array(LinUCB_instance.reward_history)
+
+    LinUCB_expected_reward = LinUCB_history / REPEAT
+    LinUCB_expected_reward = np.cumsum(LinUCB_expected_reward)
+    best_rewards = my_context_arm.genie_reward()
+    best_rewards = best_rewards * np.linspace(1, HORIZON, num=HORIZON)
+    LinUCB_regret = best_rewards - LinUCB_expected_reward
+    return LinUCB_regret
+
+
+if __name__ == '__main__':
+
+    ### Experiments ###
+    REPEAT = 500
+    HORIZON = 10000
+    LinUCB_regret = regret_vs_horizon(REPEAT, HORIZON)
+
+
+    ### Plot Results ###
+    plt.plot(LinUCB_regret)
+    plt.xlabel("Horizon")
+    plt.ylabel("Cumulative Regret")
+    plt.title("LinUCB: Regret vs Horizeon")
+    plt.show()
+
+    horizon = np.linspace(1, HORIZON, num=HORIZON)
+
+    plt.semilogx(horizon[1000:], LinUCB_regret[1000:])
+    plt.xlabel('Horizon')
+    plt.ylabel('Cumulative Regret')
+    plt.title('LinUCB: Regret vs Horizeon (Semilogx)')
+    plt.show()
+
     
-    LinUCB_instance = LinUCB(available_arms)
-    for i in range(HORIZON):
-      arm, arm_idx = LinUCB_instance.choose_arm()
-      reward = my_context_arm.pull_arm(arm_idx)
-      LinUCB_instance.update(reward, arm_idx)
-    LinUCB_history += np.array(LinUCB_instance.reward_history)
-
-  LinUCB_expected_reward = LinUCB_history / REPEAT
-  LinUCB_expected_reward = np.cumsum(LinUCB_expected_reward)
-  best_rewards = my_context_arm.genie_reward()
-  best_rewards = best_rewards * np.linspace(1, HORIZON, num=HORIZON)
-  LinUCB_regret = best_rewards - LinUCB_expected_reward
-  return LinUCB_regret
-
-
-### Experiments ###
-REPEAT = 500
-HORIZON = 10000
-LinUCB_regret = regret_vs_horizon(REPEAT, HORIZON)
-
-
-### Plot Results ###
-plt.plot(LinUCB_regret)
-plt.xlabel("Horizon")
-plt.ylabel("Cumulative Regret")
-plt.title("LinUCB: Regret vs Horizeon")
-plt.show()
-
-horizon = np.linspace(1, HORIZON, num=HORIZON)
-
-plt.semilogx(horizon[1000:], LinUCB_regret[1000:])
-plt.xlabel('Horizon')
-plt.ylabel('Cumulative Regret')
-plt.title('LinUCB: Regret vs Horizeon (Semilogx)')
-plt.show()
-
-   

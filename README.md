@@ -14,7 +14,7 @@ Furthermore, these algorithms differ in their requirement of time horizon and re
 
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
-| Explore-then-Commit | Unstructured | \Delta | --- |
+| Explore-then-Commit | Unstructured | $\Delta$ | --- |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |

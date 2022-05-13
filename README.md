@@ -14,7 +14,7 @@ Furthermore, these algorithms differ in their requirement of the time horizon ![
 
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
-| Explore-then-Commit (ETC) | Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;), ![n](https://latex.codecogs.com/svg.image?n) | ![]() |
+| Explore-then-Commit (ETC) | Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;), ![n](https://latex.codecogs.com/svg.image?n) | ![R_{n} = \frac{4}{n}  ln(n) + C](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{4}{n}&space;&space;ln(n)&space;&plus;&space;C) |
 | Epsilon-Greedy (E-Greedy)| Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | --- |
 | Elimination | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |
 | Upper-Confidence Bound (UCB) | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |

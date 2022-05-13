@@ -8,13 +8,13 @@ Vis-a-vis Bandits used in Reinforcement Learning settings, three key assumptions
 - Action does not alter the environment.
 - Taking an action does not restrict future actions.
 
-Furthermore, these algorithms differ in their requirement of the time horizon ![n](https://latex.codecogs.com/svg.image?n)  and suboptimality gap ![\Delta](https://latex.codecogs.com/svg.image?\Delta&space;), and in their scaling of regret bounds.
+Furthermore, these algorithms differ in their requirement of the time horizon ![n](https://latex.codecogs.com/svg.image?n)  and suboptimality gap ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;), and in their scaling of regret bounds.
 
 
 
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
-| Explore-then-Commit | Unstructured | ![\Delta](https://latex.codecogs.com/svg.image?\Delta&space;), ![n](https://latex.codecogs.com/svg.image?n) | ![]() |
+| Explore-then-Commit | Unstructured | ![n](https://latex.codecogs.com/svg.image?n), ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | ![]() |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |

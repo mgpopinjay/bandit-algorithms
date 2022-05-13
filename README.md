@@ -1,4 +1,4 @@
-# online-learning-algorithms
+# bandit-algorithms
 A small collection of Bandit Algorithms (ETC, E-Greedy, Elimination, UCB, Exp3, LinearUCB, and Thompson Sampling)
 
 Python implementation of selected multi-arm bandit algorithms that are fundamental to recommendation systems, online advertising, clinical trials, online resource allocation and online search.

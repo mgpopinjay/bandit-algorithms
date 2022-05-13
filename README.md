@@ -21,3 +21,6 @@ Furthermore, these algorithms differ in their requirement of the time horizon ![
 | Exponantiate-Explore-Exploit (Exp3) - Partial feedback | Adversarial / Non-stochastic | --- | ![R_{n} = \sqrt{2nk  ln(k)}](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\sqrt{2nk&space;&space;ln(k)}) |
 | Linear UCB (LinUCB) | Contextual / Linear | --- | ![R_{n} = Cd \sqrt{n} ln(nL)](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;Cd&space;\sqrt{n}&space;ln(nL)) |
 | Thompson Sampling | Structured | --- | ![R_{n} = ln(n)](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;ln(n)) |
+
+For detailed background of each algorithm, refer to [Bandit Algorithms (2020)](https://doi.org/10.1017/9781108571401) by Lattimore & Szepesvari.
+

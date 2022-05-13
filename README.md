@@ -14,10 +14,10 @@ Furthermore, these algorithms differ in their requirement of the time horizon ![
 
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
-| Explore-then-Commit | Unstructured | ![n](https://latex.codecogs.com/svg.image?n), ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | ![]() |
-| Epsilon-Greedy | --- | --- | --- |
-| Epsilon-Greedy | --- | --- | --- |
-| Epsilon-Greedy | --- | --- | --- |
-| Epsilon-Greedy | --- | --- | --- |
-| Epsilon-Greedy | --- | --- | --- |
-| Epsilon-Greedy | --- | --- | --- |
+| Explore-then-Commit (ETC) | Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;), ![n](https://latex.codecogs.com/svg.image?n) | ![]() |
+| Epsilon-Greedy (E-Greedy)| Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | --- |
+| Elimination | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |
+| Upper-Confidence Bound (UCB) | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |
+| Exponantiate-Explore-Exploit (Exp3) | Adversarial / Non-stochastic | --- | --- |
+| Linear UCB (LinUCB) | Contextual / Linear | --- | --- |
+| Thompson Sampling | Structured | --- | --- |

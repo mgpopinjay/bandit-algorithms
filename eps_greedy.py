@@ -52,7 +52,8 @@ class egreedy():
 
         self.iter += 1
         self.num_pulls[arm] += 1
-        self.emp_means[arm] += (rew[arm] - self.emp_means[arm]) / self.num_pulls[arm]
+        self.emp_means[arm] = (self.emp_means[arm] * (self.num_pulls[arm] - 1.0) + rew[arm]) / self.num_pulls[arm]
+
 
         # Update exploration probaility in porportion to num of arms, time and delta
         C = self.C

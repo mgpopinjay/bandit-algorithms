@@ -8,7 +8,7 @@ Vis-a-vis Bandits used in Reinforcement Learning settings, three key assumptions
 - Action does not alter the environment.
 - Taking an action does not restrict future actions.
 
-Furthermore, these algorithms differ in their requirement of time horizon and reward gaps, and in their scaling of regret bounds.
+Furthermore, these algorithms differ in their requirement of the time horizon ![n](https://latex.codecogs.com/svg.image?n)  and suboptimality gap ![\Delta](https://latex.codecogs.com/svg.image?\Delta&space;), and in their scaling of regret bounds.
 
 
 

@@ -18,6 +18,6 @@ Furthermore, these algorithms differ in their requirement of the time horizon ![
 | Epsilon-Greedy (E-Greedy)| Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | ![R_{n} = \frac{1}{\Delta }  ln(n) + C](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{1}{\Delta&space;}&space;&space;ln(n)&space;&plus;&space;C) |
 | Elimination | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | ![R_{n} = \frac{C_{1}}{\Delta }  ln(n) + C_{2}](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{C_{1}}{\Delta&space;}&space;&space;ln(n)&space;&plus;&space;C_{2}) |
 | Upper-Confidence Bound (UCB) - Infinite Horizon | Unstructured / Stochastic | --- | ![R_{n} = \frac{2}{\Delta }  ln(n)](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{2}{\Delta&space;}&space;&space;ln(n)) |
-| Exponantiate-Explore-Exploit (Exp3) | Adversarial / Non-stochastic | --- | --- |
+| Exponantiate-Explore-Exploit (Exp3) | Adversarial / Non-stochastic | --- | ![R_{n} = \sqrt{2nk  ln(k)}](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\sqrt{2nk&space;&space;ln(k)}) |
 | Linear UCB (LinUCB) | Contextual / Linear | --- | --- |
 | Thompson Sampling | Structured | --- | --- |

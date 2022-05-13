@@ -15,7 +15,7 @@ Furthermore, these algorithms differ in their requirement of the time horizon ![
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
 | Explore-then-Commit (ETC) | Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;), ![n](https://latex.codecogs.com/svg.image?n) | ![R_{n} = \frac{4}{n}  ln(n) + C](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{4}{n}&space;&space;ln(n)&space;&plus;&space;C) |
-| Epsilon-Greedy (E-Greedy)| Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | --- |
+| Epsilon-Greedy (E-Greedy)| Unstructured / Stochastic | ![\Delta](https://latex.codecogs.com/svg.image?\Delta_{i}&space;) | ![R_{n} = \frac{1}{\Delta }  ln(n) + C](https://latex.codecogs.com/svg.image?R_{n}&space;=&space;\frac{1}{\Delta&space;}&space;&space;ln(n)&space;&plus;&space;C) |
 | Elimination | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |
 | Upper-Confidence Bound (UCB) | Unstructured / Stochastic | ![n](https://latex.codecogs.com/svg.image?n) | --- |
 | Exponantiate-Explore-Exploit (Exp3) | Adversarial / Non-stochastic | --- | --- |

@@ -14,7 +14,7 @@ Furthermore, these algorithms differ in their requirement of time horizon and re
 
 | Algorithm | Environment | Requirement | Regret Scaling |
 | --- | --- | --- | --- |
-| Explore-then-Commit | Unstructured | ![\sum_{\forall i}{x_i^{2}}](https://latex.codecogs.com/svg.image?\Delta&space;) | --- |
+| Explore-then-Commit | Unstructured | ![\Delta](https://latex.codecogs.com/svg.image?\Delta&space;) | --- |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |
 | Epsilon-Greedy | --- | --- | --- |

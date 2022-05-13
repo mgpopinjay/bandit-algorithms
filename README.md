@@ -1,5 +1,5 @@
 # bandit-algorithms
-Multi-arm bandit algorithms that are fundamental to recommendation systems, online advertising, clinical trials, online resource allocation and online search. Here is a small collection (ETC, E-Greedy, Elimination, UCB, Exp3, LinearUCB, and Thompson Sampling) of them in Python Implementation.
+Multi-arm bandit algorithms are fundamental to enabling recommendation systems, online advertising, clinical trials, online resource allocation and online search. Here is a small collection (ETC, E-Greedy, Elimination, UCB, Exp3, LinearUCB, and Thompson Sampling) of them in Python Implementation.
 
 Vis-a-vis Bandits used in Reinforcement Learning settings, three key assumptions apply:
 - Reward observed only conrrespond to the action taken (feedback).

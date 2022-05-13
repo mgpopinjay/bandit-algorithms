@@ -9,3 +9,15 @@ Vis-a-vis Bandits used in Reinforcement Learning settings, three key assumptions
 - Taking an action does not restrict future actions.
 
 Furthermore, these algorithms differ in their requirement of time horizon and reward gaps, and in their scaling of regret bounds.
+
+
+
+| Algorithm | Environment | Requirement | Regret Scaling |
+| --- | --- | --- | --- |
+| Explore-then-Commit | Unstructured | \Delta | --- |
+| Epsilon-Greedy | --- | --- | --- |
+| Epsilon-Greedy | --- | --- | --- |
+| Epsilon-Greedy | --- | --- | --- |
+| Epsilon-Greedy | --- | --- | --- |
+| Epsilon-Greedy | --- | --- | --- |
+| Epsilon-Greedy | --- | --- | --- |
